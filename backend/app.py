@@ -1,7 +1,9 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 import pandas as pd
 
 app = Flask(__name__)
+CORS(app)
 
 df = pd.read_csv("data/treinos.csv")
 df.columns = df.columns.str.strip()
@@ -25,3 +27,4 @@ def get_resumo():
 
 if __name__ == "__main__":
     app.run(debug=True)
+

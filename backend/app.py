@@ -14,14 +14,14 @@ df["pace"] = (df["tempo_min"] / df["distancia_km"]).round(2)
 def get_treinos():
     return jsonify(df.to_dict(orient="records"))
 
-@app.route("/api/resumo")
+@app.route("/api/resumo", methods=["GET"])
 def get_resumo():
     resumo = {
         "total_corridas": len(df),
-        "distancia_total": df["distancia_km"].sum(),
-        "tempo_total": df["tempo_min"].sum(),
-        "calorias_total": df["calorias"].sum(),
-        "pace_medio": round(df["pace"].mean(),2)
+        "distancia_total": float(df["distancia_km"].sum()),
+        "tempo_total": float(df["tempo_min"].sum()),
+        "calorias_total": int(df["calorias"].sum()),
+        "pace_medio": round(float(df["pace"].mean()),2)
     }
     return jsonify(resumo)
 

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    background: rgb(25, 24, 24);
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: yellowgreen;
 }
 
 .resumo {
@@ -23,6 +23,15 @@ h1 {
     justify-content: space-around;
     margin: 20px 0;
 }
+
+
+.tabelaTreinos {
+    color: yellowgreen;
+    margin: 10px 0px 10px 280px;
+    padding: 10 px;
+    font-size: larger;
+}
+
 
 .card {
     background-color: white;

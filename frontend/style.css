@@ -24,11 +24,15 @@ h1 {
     margin: 20px 0;
 }
 
+.tabela-container {
+    display: flex;
+    justify-content: center;
+}
 
-.tabelaTreinos {
+.tabela-treino {
     color: yellowgreen;
-    margin: 10px 0px 10px 280px;
-    padding: 10 px;
+    margin: 10px;
+    padding: 10px;
     font-size: larger;
 }
 
